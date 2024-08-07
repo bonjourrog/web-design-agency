@@ -19,4 +19,7 @@ body,  html{
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --app-blue:#D6E5F6;
+  --app-deep-blue:#1D3366;
 }
