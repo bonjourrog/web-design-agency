@@ -7,6 +7,7 @@
     background-color: var(--app-blue);
 }
 .header{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,8 +17,13 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    gap: 3em;
     margin-top: 7em;
     z-index: 10 !important;
+}
+.hero__image-cont{
+    display: flex;
+    align-items: center;
 }
 .hero__message{
     display: flex;
@@ -72,9 +78,110 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all .3s ease-in-out;
 }
 .nav__list{
     display: flex;
     gap: 1em;
     list-style: none;
+}
+.nav__menu--btn{
+    position: absolute;
+    top: 50%;
+    right: 3em;
+    width: 4em;
+    color: black;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+    z-index: 20;
+}
+.nav__cta{
+    box-sizing: unset;
+    padding: .8em 1.8em;
+    color: white;
+    font-weight: bold;
+    background-color: #6060e8;
+    border: .1em solid #6060e8;
+    border-radius: 5em;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.nav__cta:hover{
+    background-color: #4444d7;
+    border: .4em solid #7f7fdd81;
+    box-shadow: .3em .3em 1em rgba(80, 124, 255, 0.495);
+}
+@media screen and (max-width:1530px){
+    .hero__headline{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1400px){
+    .hero__image{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1200px) {
+    .hero{
+        padding: 0em 7em;
+    }
+}
+@media screen and (max-width:1200px) {
+    .hero{
+        padding: 0em 4em;
+    }
+    .hero__message{
+        width: 40em;
+        margin: 3em auto;
+    }
+    .hero__image-cont{
+        display: none;
+    }
+}
+@media screen and (max-width:800px) {
+    .header{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        padding: 0;
+    }
+    .nav{
+        position: absolute;
+        top: 0;
+        right: -100vw;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        background-color: white;
+        z-index: 11;
+    }
+    .nav__list{
+        flex-direction: column;
+    }
+    .hero>div{
+        margin: 0;
+        align-items: center;
+        height: 100vh;
+    }
+}
+@media screen and (max-width:600px) {
+    .hero__message{
+        width: 100%;
+    }
+    .hero__headline{
+        font-size: 3em;
+    }
+}
+@media screen and (max-width:500px){
+    .hero__message{
+        margin: 0em;
+    }
+    .hero__caption{
+        width: 100%;
+    }
 }
